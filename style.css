@@ -105,6 +105,10 @@ a:hover {
 	font-family: "Open Sans", sans-serif;
 }
 
+ul.bullets {
+	list-style-image: url("images/heart-bullet.png");
+}
+
 .footer, .content:after {
 	height: 100px;
 }
