@@ -32,6 +32,10 @@
           </span>
         </div>
 
+        <div class="mobil-nav">
+          <i class="fa fa-bars"></i>
+        </div>
+
       </div>
       <div id="letter">
         <h1>Important Update</h1>
@@ -59,12 +63,68 @@
     <!-- Javascript -->
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script>
-      $( window ).resize(function() {
-        if($(window).width() < 1200){
-          alert("It doesn't fit!");
+      var currentSize = 0;
+
+      $(document).ready(function() {
+        if($(window).width() < 1000) {
+          currentSize = 0;
+          $(".title").addClass("title-xs");
+          $(".content").addClass("content-xs");
+          $(".nav-left").hide();
+          $(".nav-right").hide();
+        }
+        else if($(window).width() >= 1000 && $(window).width() < 1300) {
+          currentSize = 1;
+          $(".title").addClass("title-smd");
+          $(".content").addClass("content-sm");
+          $(".mobil-nav").hide();
+        }
+        else {
+          currentSize = 2;
+          $(".title").addClass("title-smd");
+          $(".content").addClass("content-md");
+          $(".mobil-nav").hide();
         }
       });
-    </script
+
+      $(window).resize(function() {
+        if($(window).width() < 1000 && currentSize != 0) {
+          $(".content").removeClass("content-sm");
+          $(".content").addClass("content-xs");
+          $(".title").removeClass("title-smd");
+          $(".title").addClass("title-xs");
+          $(".nav-left").hide();
+          $(".nav-right").hide();
+          $(".mobil-nav").show();
+          currentSize = 0;
+          console.log("Change to xs");
+        }
+        else if($(window).width() >= 1000 && $(window).width() < 1300 && currentSize != 1) {
+          $(".content").removeClass("content-md");
+          $(".content").removeClass("content-xs");
+          $(".content").addClass("content-sm");
+          $(".title").removeClass("title-xs");
+          $(".title").addClass("title-smd");
+          $(".nav-left").show();
+          $(".nav-right").show();
+          $(".mobil-nav").hide();
+          currentSize = 1;
+          console.log("Change to sm");
+        }
+        else if($(window).width() >= 1300 && currentSize != 2) {
+          $(".content").removeClass("content-sm");
+          $(".content").removeClass("content-xs");
+          $(".content").addClass("content-md");
+          $(".title").removeClass("title-xs");
+          $(".title").addClass("title-smd");
+          $(".nav-left").show();
+          $(".nav-right").show();
+          $(".mobil-nav").hide();
+          currentSize = 2;
+          console.log("Change to md");
+        }
+      });
+    </script>
   </body>
 
 </html>
