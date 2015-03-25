@@ -44,7 +44,9 @@ a:hover {
 	width: 100%;
 }
 
-#nav {
+/*=== begin nav stuff ===*/
+
+.nav {
 	text-align: center;
 	position: relative;
 	font-family: "Poiret One", sans-serif;
@@ -68,13 +70,46 @@ a:hover {
 	margin-top: 10px;
 }
 
-.mobil-nav {
+.nav-icon {
 	position: absolute;
 	right: 10px;
 	top: 0px;
 	font-size: 25px;
 	color: #AB7B59;
 }
+
+.mobil-nav {
+	display: none;
+	height: 100%;
+	width: 100%;
+	background-color: #fff;
+	color: #635448;
+	font-family: "Poiret One", sans-serif;
+	font-size: 20px;
+	position: fixed;
+	z-index: 3;
+}
+
+.nav-item-xs {
+	text-align: center;
+	margin-bottom: 10px;
+	height: 30px;
+	width: 30%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.nav-item {
+	text-align: center;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.nav-current {
+	border-bottom: 1px solid #EFD2BD;
+}
+
+/*~~~ end nav stuff ~~~*/
 
 .title {
 	color: #AB7B59;
@@ -88,16 +123,6 @@ a:hover {
 .title-xs {
 	text-align: left;
 	font-size: 25px;
-}
-
-.nav-item {
-	text-align: center;
-	margin-left: 30px;
-	margin-right: 30px;
-}
-
-.nav-current {
-	border-bottom: 1px solid #EFD2BD;
 }
 
 #letter {
