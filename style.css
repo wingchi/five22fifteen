@@ -2,6 +2,7 @@ html, body {
 	margin: 0px;
 	height: 100%;
 	background-image: url("images/upfeathers.png");
+	background-color: #f3f0e8;
 }
 
 a {
