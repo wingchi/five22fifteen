@@ -18,6 +18,10 @@ a:hover {
 	color: #AB7B59;
 }
 
+h1, h2, h3 {
+	font-family: "Poiret One", sans-serif;
+}
+
 .content {
 	background-color: #fff;
 	margin-left: auto;
@@ -110,7 +114,7 @@ a:hover {
 	border-bottom: 1px solid #EFD2BD;
 }
 
-/*~~~ end nav stuff ~~~*/
+/*=== end nav stuff ===*/
 
 .title {
 	color: #AB7B59;
