@@ -37,12 +37,12 @@ h1, h2, h3 {
 }
 
 .content-md {
-	width: 60%;
+	width: 750px;
 	max-width: 1000px;
 }
 
 .content-sm {
-	width: 80%;
+	width: 750px;
 }
 
 .content-xs {
@@ -61,11 +61,25 @@ h1, h2, h3 {
 	margin-right: 10px;
 }
 
+@media screen and (max-width: 999px) {
+	.nav {
+		height: 40px;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.nav {
+		height: 60px;
+	}
+}
+
 .nav-left {
 	position: absolute;
 	left: 10px;
 	top: 0px;
 	margin-top: 10px;
+	width: 245px;
+	margin-top: 20px;
 }
 
 .nav-right {
@@ -73,6 +87,8 @@ h1, h2, h3 {
 	right: 10px;
 	top: 0px;
 	margin-top: 10px;
+	width: 245px;
+	margin-top: 20px;
 }
 
 .nav-icon {
@@ -123,6 +139,7 @@ h1, h2, h3 {
 .title-smd {
 	font-size: 40px;
 	text-align: center;
+	padding-top: 10px;
 }
 
 .title-xs {
