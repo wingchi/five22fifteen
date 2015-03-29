@@ -156,6 +156,10 @@ ul.bullets {
 	list-style-image: url("images/heart-bullet.png");
 }
 
+.banner-image {
+	width: 100%;
+}
+
 .footer, .content:after {
 	height: 100px;
 }
