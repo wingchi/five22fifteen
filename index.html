@@ -6,6 +6,8 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- JQuery Countdown CSS -->
+    <link href="jquery.countdown.css" rel="stylesheet">
     <link rel="stylesheet" href="fa/css/font-awesome.min.css">
     <meta name="robots" content="noindex, nofollow">
   </head>
@@ -54,6 +56,12 @@
         </div>
 
       </div>
+      <div id="header-countdown">
+        <h2>We're getting married in</h2>
+        <!-- Begin Countdown -->
+        <div id="weddingCountdown"></div>
+        <!-- End Countdown -->
+      </div>
       <div id="letter">
         <h1>Important Update</h1>
         <h2>Our dearest friends and family,</h2>
@@ -98,6 +106,16 @@
     <!-- Javascript -->
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="responsive.js"></script>
+    <script src="jquery.plugin.js"></script>
+    <script src="jquery.countdown.js"></script>
+    <script>
+      $(function () {
+        var weddingDay = new Date();
+        weddingDay = new Date(2015, 5 - 1, 22, 15);
+        $('#weddingCountdown').countdown({until: weddingDay});
+        $('#year').text(weddingDay.getFullYear());
+      });
+    </script>
   </body>
 
 </html>

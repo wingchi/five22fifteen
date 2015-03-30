@@ -132,6 +132,16 @@ h1, h2, h3 {
 
 /*=== end nav stuff ===*/
 
+#header-countdown {
+	text-align: center;
+}
+
+#weddingCountdown {
+	width: 300px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 .title {
 	color: #AB7B59;
 }
